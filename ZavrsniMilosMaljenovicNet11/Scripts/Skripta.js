@@ -23,7 +23,6 @@
     $("body").on("click", "#giveUpBtn", cleanForm);
     $("body").on("click", "#prijavaBtn", loadLoginForm);
     $("body").on("click", "#btnDelete", deletepicture);
-    //$("body").on("click", "#btnTradition", loadTradition);
 
 
     $("body").on("click", "#loginBtn", ulogujSe);
@@ -80,8 +79,7 @@
         $("#search").addClass("hidden");
         $("#findInput1").val('');
         $("#findInput2").val('');
-        //$("#tradition").addClass("hidden");
-        //$("#btnTradition").css("display", "block");
+
 
 
 
@@ -200,9 +198,7 @@
             "data": sendData
 
         }).done(function (data) {
-            console.log(data);
-            //var b = $("<b></b>");
-            //b.text(data.userName);
+
             $("#info").empty().html("Prijavljen korisnik: <b>" + data.userName + "</b>");
 
             token = data.access_token;
@@ -223,7 +219,6 @@
             $("#data").css("display", "block");
             $("#create").removeClass("hidden");
             $("#search").removeClass("hidden");
-            //$("#tradition").removeClass("hidden");
 
         }).fail(function (data) {
             alert("Greska prilikom prijave!");
@@ -313,7 +308,7 @@
                 $("#findInput1").val('');
                 $("#findInput2").val('');
 
-                //$("#data").css("float", "right");
+
             }
         }
         else {
