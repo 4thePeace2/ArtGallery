@@ -32,6 +32,7 @@
     
 
     $("body").on("click", "#regBtn", reset);
+    var lang = $("#prijavaBtn").text();
 
     //>>>>>>>>>>>>>>>> Clean creation form <<<<<<<<<<<<<<
 
@@ -199,7 +200,7 @@
 
         }).done(function (data) {
 
-            $("#info").empty().html("Prijavljen korisnik: <b>" + data.userName + "</b>");
+            //$("#info").empty().html("Prijavljen korisnik: <b>" + data.userName + "</b>");
 
             token = data.access_token;
             console.log(token);
@@ -207,7 +208,14 @@
             $("#loginPass").val('');
             $("#loginDiv").css("display", "none");
             $("#regForm").css("display", "none");
-            $("#loggedInParagraph").html("Prijavljen korisnik: <b>" + email + "</b>");
+            if (lang === 'Login') {
+                $("#loggedInParagraph").html("Current user: <b>" + email + "</b>");
+
+            } else {
+                $("#loggedInParagraph").html("Prijavljen korisnik: <b>" + email + "</b>");
+
+
+            }
             $("#logoutDiv").css("display", "block");
             $("#brDiv").removeClass("hidden");
 
@@ -265,14 +273,34 @@
 
             // ispis naslova
             var div = $("<div></div>");
-            var h1 = $("<h1>Slike</h1>");
+            if (lang === 'Login') {
+                var h1 = $("<h1>Pictures</h1>");
+                var name = "Name";
+                var author = "Author";
+                var price = "Price";
+                var galery = "Galery";
+                var action = "Action";
+                var deleteAction = "delete";
+
+
+
+            } else {
+                var h1 = $("<h1>Slike</h1>");
+                var name = "Naziv";
+                var author = "Autor";
+                var price = "Cena";
+                var galery = "Galerija";
+                var action = "Akcija";
+                var deleteAction = "obriši";
+            }
+            
             var head = $("<thead></thead>");
             var body = $("<tbody></tbody>");
 
             div.append(h1);
 
             var table = $("<table border='1'  class=\"table table-hover text-center\" ></table>");
-            var header = $("<tr style=\"background-color : lightblue; height:20px\"><th class=\"text-center\" style=\"width:200px\">Naziv</th><th class=\"text-center\" style=\"width:250px\">Autor</th><th class=\"text-center\" style=\"width:100px\">Cena</th><th class=\"text-center\" style=\"width:200px\">Galerija</th><th class=\"text-center hidden\" style=\"width:120px\">Akcija</th></tr>");
+            var header = $("<tr style=\"background-color : lightblue; height:20px\"><th class=\"text-center\" style=\"width:200px\">" + name + "</th><th class=\"text-center\" style=\"width:250px\">" + author + "</th><th class=\"text-center\" style=\"width:100px\">" + price + "</th><th class=\"text-center\" style=\"width:200px\">" + galery + "</th><th class=\"text-center hidden\" style=\"width:120px\">" + action +"</th></tr>");
             head.append(header);
             table.append(head);
             table.append(body);
@@ -287,7 +315,7 @@
                 // prikaz dugmadi za izmenu i brisanje
                 var stringId = data[i].Id.toString();
                 console.log(stringId);
-                var displayDelete = "<td class=\"hidden\"><a href=\"#\" id=btnDelete name=" + stringId + ">[obrisi]</a></td>";
+                var displayDelete = "<td class=\"hidden\"><a href=\"#\" id=btnDelete name=" + stringId + ">[" + deleteAction + "]</a></td>";
                 //var displayEdit = "<td class=\"hidden\"><a href=\"#\" id=btnEdit  name=" + stringId + ">[izmeni]</a></td>";
 
 

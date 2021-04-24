@@ -14,5 +14,12 @@ namespace ZavrsniMilosMaljenovicNet11.Controllers
 
             return View();
         }
+
+        public ActionResult Indexeng()
+        {
+            ViewBag.Title = "Home Page";
+
+            return View();
+        }
     }
 }
