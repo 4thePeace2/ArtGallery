@@ -10,14 +10,14 @@ namespace ZavrsniMilosMaljenovicNet11.Controllers
     {
         public ActionResult Index()
         {
-            ViewBag.Title = "Home Page";
+            ViewBag.Title = "Galerija slika";
 
             return View();
         }
 
-        public ActionResult Indexeng()
+        public ActionResult Index_eng()
         {
-            ViewBag.Title = "Home Page";
+            ViewBag.Title = "Picture galery";
 
             return View();
         }
