@@ -1,12 +1,25 @@
-# ArtGallery
-Pictures gallery, built with C# .NET 
-technology(Entity Framework + MVC + Web API) and MSSQL relation database on backend 
-as well as HTML, CSS and JavaScript/jQuery on frontend. To switch to english, once you start app click on Home button.
+#################### ArtGallery ##########################
 
-To check how it works you should:
-1.Download app
-2.Start app with your Microsoft Visual Studio
-3.Restore all packages for solution
-4.Upgrade Microsoft.AspNet.Mvc package to version 5.2.7(latest)
-5.type "update-database" in Package Manager Console
-6.Start app
+- .NET(Entity Framework + MVC + Web API) application for pictures management on various galleries. Application is made in VS2019 with MSSQL local DB.
+
+#################### Getting started ##########################
+
+- Once you download project archive, extract it and start ZavrsniMilosMaljenovicNet11.sln.
+- Navigate to Tools > Nuget Package Manager > Manage Nuget Packages for Solution...
+- Restore packages
+- In Package Manager Console run:
+- update-database
+- try starting application if it doesn't open properly try running and start it after that again:
+- Update-Package Microsoft.CodeDom.Providers.DotNetCompilerPlatform -r
+- P.S. Switch to English, with click on Home button.
+
+#################### Dependencies ####################
+
+.Net Framework 4.6.1
+EntityFramework 6.2.0
+Microsoft.AspNet.WebApi.Core 5.2.7
+Microsoft.AspNet.WebApi.Cors 5.2.7
+Microsoft.AspNet.WebApi.Tracing 5.2.7
+AutoMapper -Version 6.2.2
+Unity -Version 4.0.1
+Moq 4.16.1
