@@ -15,11 +15,11 @@
 
 #################### Dependencies ####################
 
-.Net Framework 4.6.1
-EntityFramework 6.2.0
-Microsoft.AspNet.WebApi.Core 5.2.7
-Microsoft.AspNet.WebApi.Cors 5.2.7
-Microsoft.AspNet.WebApi.Tracing 5.2.7
-AutoMapper -Version 6.2.2
-Unity -Version 4.0.1
-Moq 4.16.1
+- .Net Framework 4.6.1
+- EntityFramework 6.2.0
+- Microsoft.AspNet.WebApi.Core 5.2.7
+- Microsoft.AspNet.WebApi.Cors 5.2.7
+- Microsoft.AspNet.WebApi.Tracing 5.2.7
+- AutoMapper -Version 6.2.2
+- Unity -Version 4.0.1
+- Moq 4.16.1
